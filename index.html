@@ -7,65 +7,924 @@
     <title>ShopZone</title>
 
     <link rel="stylesheet" href="./css/style.css">
+    <script type="module" src="./js/script.js" defer></script>
+    <script type="module" src="./js/product.js" defer></script>
 
+    <!-- Impot Font awesome icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
+    <!-- Import Remix icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet" />
 </head>
 
 <body>
 
-
-    <!-- Navbar -->
-
+    <!--========================= Header SECTION ==========================-->
     <header>
-
         <div class="logo">
+            <span><i class="ri-shopping-bag-4-fill"></i></span>
             Shop<span>Zone</span>
         </div>
 
-
         <div class="search-box">
-
             <input type="text" placeholder="Search products...">
-
             <button>
-
-                <i class="fa-solid fa-magnifying-glass"></i>
-
+                <span class="material-symbols-outlined">
+                    search
+                </span>
             </button>
+        </div>
 
+        <nav>
+            <a href="index.html" class="active">Home</a>
+            <a href="#products">Shop</a>
+            <a href="#products">Categories</a>
+            <a href="#footer">About</a>
+            <a href="#footer">Contact</a>
+        </nav>
+
+        <div class="icons">
+            <div class="cart">
+                <i class="fa-regular fa-heart"></i>
+                <span>0</span>
+            </div>
+            <div class="cart">
+                <a href="./cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                <span>0</span>
+            </div>
+        </div>
+    </header>
+
+    <!--========================= HERO SECTION ==========================-->
+
+    <section class="hero">
+
+        <div class="hero-text">
+            <span class="tag">
+                SUMMER SALE
+            </span>
+            <h1>
+                Upgrade Your Lifestyle
+                <br>
+                With
+                <span>
+                    Top Accessories
+                </span>
+            </h1>
+            <p>
+                Discover the best quality products
+                at unbeatable prices.
+                <br>
+                Limited time offer. Shop now!
+            </p>
+
+            <div class="hero-btns">
+                <a href="#products" class="btn shop-btn">
+                    Shop Now
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+                <a href="#products" class="btn outline-btn">
+                    Explore More
+                </a>
+            </div>
+        </div>
+
+    </section>
+
+    <!--========================= Feature SECTION ==========================-->
+
+    <section class="feature">
+
+        <div class="feature-child">
+            <div class="feature-child-icon">
+                <span class="material-symbols-outlined">
+                    delivery_truck_speed
+                </span>
+            </div>
+            <div class="feature-child-text">
+                <h4>Free Shipping</h4>
+                <p>On orders above &#8377<span>499</span></p>
+            </div>
+        </div>
+
+        <div class="stick"></div>
+
+        <div class="feature-child">
+            <div class="feature-child-icon">
+                <span class="material-symbols-outlined">
+                    security
+                </span>
+            </div>
+            <div class="feature-child-text">
+                <h4>Secure Payment</h4>
+                <p>100% secure payment</p>
+            </div>
+        </div>
+
+        <div class="stick"></div>
+
+        <div class="feature-child">
+            <div class="feature-child-icon">
+                <i class="fa-solid fa-arrows-rotate"></i>
+            </div>
+            <div class="feature-child-text">
+                <h4>Easy Retruns</h4>
+                <p>7-day easy returns</p>
+            </div>
+        </div>
+        <div class="stick"></div>
+
+        <div class="feature-child">
+            <div class="feature-child-icon">
+                <i class="fa-solid fa-headset"></i>
+            </div>
+            <div class="feature-child-text">
+                <h4>27/7 Support</h4>
+                <p>We're here to help</p>
+            </div>
+        </div>
+
+    </section>
+
+    <!--========================= Product SECTION ==========================-->
+
+    <section class="products" id="products">
+        <div class="products-nav">
+            <h1>Our Products</h1>
+            <p>Discover Amazing products at great prices</p>
+
+            <nav class="products-nav-btns">
+                <a href="#"><Button id="products-nav-btn1">ALL</Button></a>
+                <a href="#"><Button>Fashion</Button></a>
+                <a href="#"><Button>Electronic</Button></a>
+                <a href="#"><Button>Footwear</Button></a>
+                <a href="#"><Button>Accessories</Button></a>
+            </nav>
         </div>
 
 
+        <div class="product-container">
 
-        <nav>
+            <!-- Product -->
 
-            <a href="#">Home</a>
-            <a href="#">Shop</a>
-            <a href="#">Categories</a>
-            <a href="#">Deals</a>
-            <a href="#">Contact</a>
+            <div class="product-card">
+                <div class="product-card-image product-card-image1">
+                    <div class="discount">50% OFF</div>
+                    <button class="wishlist">
+                        <i class="fa-regular fa-heart"></i>
+                    </button>
+                </div>
 
-        </nav>
+                <div class="product-info">
+                    <h3 class="category">
+                        boAt Rockerz 450
+                    </h3>
+                    <p>
+                        Wireless Headphone
+                    </p>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <span>4.6</span>
+                        <small>(1.2k)</small>
+                    </div>
+                </div>
 
+                <div class="product-info price-info">
+                    <div class="price">
+                        <span>₹1,999</span>
+                        <del>₹2,499</del>
+                    </div>
+                    <button class="cart-btn">
+                        <span class="material-symbols-outlined">
+                            shopping_cart
+                        </span>
+                    </button>
+                </div>
 
-        <div class="icons">
+            </div>
 
-            <i class="fa-regular fa-heart"></i>
+            <div class="product-card">
+                <div class="product-card-image product-card-image2">
+                    <div class="discount">50% OFF</div>
+                    <button class="wishlist">
+                        <i class="fa-regular fa-heart"></i>
+                    </button>
+                </div>
 
-            <div class="cart">
+                <div class="product-info">
+                    <h3 class="category">
+                        boAt Rockerz 450
+                    </h3>
+                    <p>
+                        Wireless Headphone
+                    </p>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <span>4.6</span>
+                        <small>(1.2k)</small>
+                    </div>
+                </div>
 
-                <i class="fa-solid fa-cart-shopping"></i>
+                <div class="product-info price-info">
+                    <div class="price">
+                        <span>₹1,999</span>
+                        <del>₹2,499</del>
+                    </div>
+                    <button class="cart-btn">
+                        <span class="material-symbols-outlined">
+                            shopping_cart
+                        </span>
+                    </button>
+                </div>
 
-                <span>3</span>
+            </div>
+
+            <div class="product-card">
+                <div class="product-card-image product-card-image3">
+                    <div class="discount">50% OFF</div>
+                    <button class="wishlist">
+                        <i class="fa-regular fa-heart"></i>
+                    </button>
+                </div>
+
+                <div class="product-info">
+                    <h3 class="category">
+                        boAt Rockerz 450
+                    </h3>
+                    <p>
+                        Wireless Headphone
+                    </p>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <span>4.6</span>
+                        <small>(1.2k)</small>
+                    </div>
+                </div>
+
+                <div class="product-info price-info">
+                    <div class="price">
+                        <span>₹1,999</span>
+                        <del>₹2,499</del>
+                    </div>
+                    <button class="cart-btn">
+                        <span class="material-symbols-outlined">
+                            shopping_cart
+                        </span>
+                    </button>
+                </div>
+
+            </div>
+
+            <div class="product-card">
+                <div class="product-card-image product-card-image4">
+                    <div class="discount">50% OFF</div>
+                    <button class="wishlist">
+                        <i class="fa-regular fa-heart"></i>
+                    </button>
+                </div>
+
+                <div class="product-info">
+                    <h3 class="category">
+                        boAt Rockerz 450
+                    </h3>
+                    <p>
+                        Wireless Headphone
+                    </p>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <span>4.6</span>
+                        <small>(1.2k)</small>
+                    </div>
+                </div>
+
+                <div class="product-info price-info">
+                    <div class="price">
+                        <span>₹1,999</span>
+                        <del>₹2,499</del>
+                    </div>
+                    <button class="cart-btn">
+                        <span class="material-symbols-outlined">
+                            shopping_cart
+                        </span>
+                    </button>
+                </div>
+
+            </div>
+
+            <div class="product-card">
+                <div class="product-card-image">
+                    <div class="discount">50% OFF</div>
+                    <button class="wishlist">
+                        <i class="fa-regular fa-heart"></i>
+                    </button>
+                </div>
+
+                <div class="product-info">
+                    <h3 class="category">
+                        boAt Rockerz 450
+                    </h3>
+                    <p>
+                        Wireless Headphone
+                    </p>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <span>4.6</span>
+                        <small>(1.2k)</small>
+                    </div>
+                </div>
+
+                <div class="product-info price-info">
+                    <div class="price">
+                        <span>₹1,999</span>
+                        <del>₹2,499</del>
+                    </div>
+                    <button class="cart-btn">
+                        <span class="material-symbols-outlined">
+                            shopping_cart
+                        </span>
+                    </button>
+                </div>
+
+            </div>
+
+            <div class="product-card">
+                <div class="product-card-image">
+                    <div class="discount">50% OFF</div>
+                    <button class="wishlist">
+                        <i class="fa-regular fa-heart"></i>
+                    </button>
+                </div>
+
+                <div class="product-info">
+                    <h3 class="category">
+                        boAt Rockerz 450
+                    </h3>
+                    <p>
+                        Wireless Headphone
+                    </p>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <span>4.6</span>
+                        <small>(1.2k)</small>
+                    </div>
+                </div>
+
+                <div class="product-info price-info">
+                    <div class="price">
+                        <span>₹1,999</span>
+                        <del>₹2,499</del>
+                    </div>
+                    <button class="cart-btn">
+                        <span class="material-symbols-outlined">
+                            shopping_cart
+                        </span>
+                    </button>
+                </div>
+
+            </div>
+
+            <div class="product-card">
+                <div class="product-card-image">
+                    <div class="discount">50% OFF</div>
+                    <button class="wishlist">
+                        <i class="fa-regular fa-heart"></i>
+                    </button>
+                </div>
+
+                <div class="product-info">
+                    <h3 class="category">
+                        boAt Rockerz 450
+                    </h3>
+                    <p>
+                        Wireless Headphone
+                    </p>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <span>4.6</span>
+                        <small>(1.2k)</small>
+                    </div>
+                </div>
+
+                <div class="product-info price-info">
+                    <div class="price">
+                        <span>₹1,999</span>
+                        <del>₹2,499</del>
+                    </div>
+                    <button class="cart-btn">
+                        <span class="material-symbols-outlined">
+                            shopping_cart
+                        </span>
+                    </button>
+                </div>
+
+            </div>
+
+            <div class="product-card">
+                <div class="product-card-image">
+                    <div class="discount">50% OFF</div>
+                    <button class="wishlist">
+                        <i class="fa-regular fa-heart"></i>
+                    </button>
+                </div>
+
+                <div class="product-info">
+                    <h3 class="category">
+                        boAt Rockerz 450
+                    </h3>
+                    <p>
+                        Wireless Headphone
+                    </p>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <span>4.6</span>
+                        <small>(1.2k)</small>
+                    </div>
+                </div>
+
+                <div class="product-info price-info">
+                    <div class="price">
+                        <span>₹1,999</span>
+                        <del>₹2,499</del>
+                    </div>
+                    <button class="cart-btn">
+                        <span class="material-symbols-outlined">
+                            shopping_cart
+                        </span>
+                    </button>
+                </div>
+
+            </div>
+
+            <div class="product-card">
+                <div class="product-card-image">
+                    <div class="discount">50% OFF</div>
+                    <button class="wishlist">
+                        <i class="fa-regular fa-heart"></i>
+                    </button>
+                </div>
+
+                <div class="product-info">
+                    <h3 class="category">
+                        boAt Rockerz 450
+                    </h3>
+                    <p>
+                        Wireless Headphone
+                    </p>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <span>4.6</span>
+                        <small>(1.2k)</small>
+                    </div>
+                </div>
+
+                <div class="product-info price-info">
+                    <div class="price">
+                        <span>₹1,999</span>
+                        <del>₹2,499</del>
+                    </div>
+                    <button class="cart-btn">
+                        <span class="material-symbols-outlined">
+                            shopping_cart
+                        </span>
+                    </button>
+                </div>
+
+            </div>
+
+            <div class="product-card">
+                <div class="product-card-image">
+                    <div class="discount">50% OFF</div>
+                    <button class="wishlist">
+                        <i class="fa-regular fa-heart"></i>
+                    </button>
+                </div>
+
+                <div class="product-info">
+                    <h3 class="category">
+                        boAt Rockerz 450
+                    </h3>
+                    <p>
+                        Wireless Headphone
+                    </p>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <span>4.6</span>
+                        <small>(1.2k)</small>
+                    </div>
+                </div>
+
+                <div class="product-info price-info">
+                    <div class="price">
+                        <span>₹1,999</span>
+                        <del>₹2,499</del>
+                    </div>
+                    <button class="cart-btn">
+                        <span class="material-symbols-outlined">
+                            shopping_cart
+                        </span>
+                    </button>
+                </div>
+
+            </div>
+
+            <div class="product-card">
+                <div class="product-card-image">
+                    <div class="discount">50% OFF</div>
+                    <button class="wishlist">
+                        <i class="fa-regular fa-heart"></i>
+                    </button>
+                </div>
+
+                <div class="product-info">
+                    <h3 class="category">
+                        boAt Rockerz 450
+                    </h3>
+                    <p>
+                        Wireless Headphone
+                    </p>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <span>4.6</span>
+                        <small>(1.2k)</small>
+                    </div>
+                </div>
+
+                <div class="product-info price-info">
+                    <div class="price">
+                        <span>₹1,999</span>
+                        <del>₹2,499</del>
+                    </div>
+                    <button class="cart-btn">
+                        <span class="material-symbols-outlined">
+                            shopping_cart
+                        </span>
+                    </button>
+                </div>
+
+            </div>
+
+            <div class="product-card">
+                <div class="product-card-image">
+                    <div class="discount">50% OFF</div>
+                    <button class="wishlist">
+                        <i class="fa-regular fa-heart"></i>
+                    </button>
+                </div>
+
+                <div class="product-info">
+                    <h3 class="category">
+                        boAt Rockerz 450
+                    </h3>
+                    <p>
+                        Wireless Headphone
+                    </p>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <span>4.6</span>
+                        <small>(1.2k)</small>
+                    </div>
+                </div>
+
+                <div class="product-info price-info">
+                    <div class="price">
+                        <span>₹1,999</span>
+                        <del>₹2,499</del>
+                    </div>
+                    <button class="cart-btn">
+                        <span class="material-symbols-outlined">
+                            shopping_cart
+                        </span>
+                    </button>
+                </div>
+
+            </div>
+
+            <div class="product-card">
+                <div class="product-card-image">
+                    <div class="discount">50% OFF</div>
+                    <button class="wishlist">
+                        <i class="fa-regular fa-heart"></i>
+                    </button>
+                </div>
+
+                <div class="product-info">
+                    <h3 class="category">
+                        boAt Rockerz 450
+                    </h3>
+                    <p>
+                        Wireless Headphone
+                    </p>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <span>4.6</span>
+                        <small>(1.2k)</small>
+                    </div>
+                </div>
+
+                <div class="product-info price-info">
+                    <div class="price">
+                        <span>₹1,999</span>
+                        <del>₹2,499</del>
+                    </div>
+                    <button class="cart-btn">
+                        <span class="material-symbols-outlined">
+                            shopping_cart
+                        </span>
+                    </button>
+                </div>
+
+            </div>
+
+            <div class="product-card">
+                <div class="product-card-image">
+                    <div class="discount">50% OFF</div>
+                    <button class="wishlist">
+                        <i class="fa-regular fa-heart"></i>
+                    </button>
+                </div>
+
+                <div class="product-info">
+                    <h3 class="category">
+                        boAt Rockerz 450
+                    </h3>
+                    <p>
+                        Wireless Headphone
+                    </p>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <span>4.6</span>
+                        <small>(1.2k)</small>
+                    </div>
+                </div>
+
+                <div class="product-info price-info">
+                    <div class="price">
+                        <span>₹1,999</span>
+                        <del>₹2,499</del>
+                    </div>
+                    <button class="cart-btn">
+                        <span class="material-symbols-outlined">
+                            shopping_cart
+                        </span>
+                    </button>
+                </div>
+
+            </div>
+
+            <div class="product-card">
+                <div class="product-card-image">
+                    <div class="discount">50% OFF</div>
+                    <button class="wishlist">
+                        <i class="fa-regular fa-heart"></i>
+                    </button>
+                </div>
+
+                <div class="product-info">
+                    <h3 class="category">
+                        boAt Rockerz 450
+                    </h3>
+                    <p>
+                        Wireless Headphone
+                    </p>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <span>4.6</span>
+                        <small>(1.2k)</small>
+                    </div>
+                </div>
+
+                <div class="product-info price-info">
+                    <div class="price">
+                        <span>₹1,999</span>
+                        <del>₹2,499</del>
+                    </div>
+                    <button class="cart-btn">
+                        <span class="material-symbols-outlined">
+                            shopping_cart
+                        </span>
+                    </button>
+                </div>
+
+            </div>
+
+            <div class="product-card">
+                <div class="product-card-image">
+                    <div class="discount">50% OFF</div>
+                    <button class="wishlist">
+                        <i class="fa-regular fa-heart"></i>
+                    </button>
+                </div>
+
+                <div class="product-info">
+                    <h3 class="category">
+                        boAt Rockerz 450
+                    </h3>
+                    <p>
+                        Wireless Headphone
+                    </p>
+                    <div class="rating">
+                        <i class="fa-solid fa-star"></i>
+                        <span>4.6</span>
+                        <small>(1.2k)</small>
+                    </div>
+                </div>
+
+                <div class="product-info price-info">
+                    <div class="price">
+                        <span>₹1,999</span>
+                        <del>₹2,499</del>
+                    </div>
+                    <button class="cart-btn">
+                        <span class="material-symbols-outlined">
+                            shopping_cart
+                        </span>
+                    </button>
+                </div>
 
             </div>
 
         </div>
 
-    </header>
+    </section>
 
+    <!-- ================= NEWSLETTER ================= -->
 
+    <section class="newsletter">
+        <h2>Subscribe to our Newsletter</h2>
+        <p>
+            Get updates about new arrivals and exclusive offers.
+        </p>
+        <div class="newsletter-box">
+            <input type="email" placeholder="Enter your email">
+            <button>
+                Subscribe
+            </button>
+        </div>
+    </section>
 
+    <!-- =========================  Footer Section  ========================= -->
+
+    <footer class="footer" id="footer">
+
+        <div class="footer-details">
+
+            <div class="footer-details-text">
+                <div class="logo">
+                    <span><i class="ri-shopping-bag-4-fill"></i></span>
+                    Shop<span>Zone</span>
+                </div>
+                <p>Your one-stop destinatio for quality products at affordable price.</p>
+                <h2>Follow Us</h2>
+                <div class="footer-details-social-icon">
+                    <a href="https://www.facebook.com/"><img src="./assets/Social/facebook.png" alt="Facebook"></a>
+                    <a href="https://www.instagram.com"><img src="./assets/Social/instagram.png" alt="Instagram"></a>
+                    <a href="https://x.com/"><img src="./assets/Social/twitter.png" alt="Twitter"></a>
+                    <a href="https://www.linkedin.com/"><img src="./assets/Social/linkedin.png" alt="Linkdin"></a>
+                </div>
+            </div>
+
+            <div class="footer-links quick-link">
+                <h2>Quick Links</h2>
+                <div>
+                    <a href="index.html">
+                        <span>Home</span>
+                        <i class="ri-arrow-right-s-line"></i>
+                    </a>
+                    <a href="#products">
+                        <span>Shop</span>
+                        <i class="ri-arrow-right-s-line"></i>
+                    </a>
+                    <a href="#products">
+                        <span>Categories</span>
+                        <i class="ri-arrow-right-s-line"></i>
+                    </a>
+                    <a href="cart.html">
+                        <span>Cart</span>
+                        <i class="ri-arrow-right-s-line"></i>
+                    </a>
+                    <a href="checkout.html">
+                        <span>Checkout</span>
+                        <i class="ri-arrow-right-s-line"></i>
+                    </a>
+                    <a href="#footer">
+                        <span>About Us</span>
+                        <i class="ri-arrow-right-s-line"></i>
+                    </a>
+                    <a href="#footer">
+                        <span>Contact Us</span>
+                        <i class="ri-arrow-right-s-line"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-links quick-link">
+                <h2>Customer Services</h2>
+                <div>
+                    <a href="#"><span>Help Center</span> <i class="ri-arrow-right-s-line"></i></a>
+                    <a href="#"><span>Shipping & Delivery</span> <i class="ri-arrow-right-s-line"></i></a>
+                    <a href="#"><span>Returns & Refunds</span> <i class="ri-arrow-right-s-line"></i></a>
+                    <a href="#"><span>Track Order</span> <i class="ri-arrow-right-s-line"></i></a>
+                    <a href="#"><span>Privacy Policy</span> <i class="ri-arrow-right-s-line"></i></a>
+                    <a href="#"><span>Terms & Conditions</span> <i class="ri-arrow-right-s-line"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-links footer-contact">
+                <h2>Contact Us</h2>
+                <div class="footer-links-contact">
+                    <a>
+                        <i class="ri-mail-line"></i>
+                        <span>support@shopzone.com</span>
+                    </a>
+                    <a>
+                        <i class="ri-phone-fill"></i>
+                        <span>+91 8874012926</span>
+                    </a>
+                    <a>
+                        <i class="ri-map-pin-line"></i>
+                        <span>New Delhi, India</span>
+                    </a>
+                    <a>
+                        <i class="ri-time-line"></i>
+                        <span>MOn - Sat: 9:00 AM - 7:00 PM <br> Sun: 10:00 AM - 5:00 PM</span>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <hr>
+
+        <div class="feature footer-feature">
+            <div class="feature-child">
+                <div class="feature-child-icon">
+                    <span class="material-symbols-outlined">
+                        delivery_truck_speed
+                    </span>
+                </div>
+                <div class="feature-child-text">
+                    <h4>Free Shipping</h4>
+                    <p>On orders above &#8377<span>499</span></p>
+                </div>
+            </div>
+
+            <div class="stick"></div>
+
+            <div class="feature-child">
+                <div class="feature-child-icon">
+                    <span class="material-symbols-outlined">
+                        security
+                    </span>
+                </div>
+                <div class="feature-child-text">
+                    <h4>Secure Payment</h4>
+                    <p>100% secure payment</p>
+                </div>
+            </div>
+
+            <div class="stick"></div>
+
+            <div class="feature-child">
+                <div class="feature-child-icon">
+                    <i class="fa-solid fa-arrows-rotate"></i>
+                </div>
+                <div class="feature-child-text">
+                    <h4>Easy Retruns</h4>
+                    <p>7-day easy returns</p>
+                </div>
+            </div>
+            <div class="stick"></div>
+
+            <div class="feature-child">
+                <div class="feature-child-icon">
+                    <i class="fa-solid fa-headset"></i>
+                </div>
+                <div class="feature-child-text">
+                    <h4>27/7 Support</h4>
+                    <p>We're here to help</p>
+                </div>
+            </div>
+
+        </div>
+
+        <hr>
+
+        <div class="copy-right">
+            <p class="copy-right-text"><i class="ri-copyright-line"></i> 2026 ShopZone. All Rights Reserved.</p>
+            <div class="copy-right-img">
+                <span>We Accept</span>
+                <div>
+                    <img class="img1" src="./assets/pay/visa.png" alt="VISA">
+                    <img class="img1" src="./assets/pay/card.png" alt="Master">
+                    <img class="img3" src="./assets/pay/Rupay-Logo.png" alt="Rupay">
+                    <img class="img4" src="./assets/pay/UPI-Logo.png" alt="UPI">
+                    <img class="img5" src="./assets/pay/Paypal_Servise.jpg" alt="payPal">
+                </div>
+            </div>
+        </div>
+    </footer>
 
 </body>
 
