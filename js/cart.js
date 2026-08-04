@@ -15,13 +15,13 @@ checkoutBtn.addEventListener("click", () => {
 // Add to cart products 
 const cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-console.log(cart);
-
+// console.log(cart);
+function renderCart() {
 const container = document.querySelector(".cart-product-info");
 
 container.innerHTML = "";
 
-cart.forEach((item) => {
+cart.forEach((item, index) => {
   container.innerHTML += `
     
     <div class="cart-product-info-container">
@@ -36,18 +36,18 @@ cart.forEach((item) => {
         <div class="cart-product-info-quantity">
 
             <div class="quantity">
-                <button class="cart-minus">
+                <button class="cart-minus" data-index="${index}">
                         <i class="ri-subtract-line"></i>
                     </button>
-                    <span class="cart-qty">1</span>
-                    <button class="cart-plus">
+                    <span class="cart-qty">${item.quantity}</span>
+                    <button class="cart-plus" data-index="${index}">
                         <i class="ri-add-line"></i>
                     </button>
             </div>
 
             <div class="cart-product-info-delete">
-                <p>${item.price}</p>
-                    <i class="ri-delete-bin-line"></i>
+                <p>${item.price * item.quantity}</p>
+                    <i class="ri-delete-bin-line delete-btn" data-id="${index}"></i>
                </div>
         </div>
 
@@ -57,19 +57,69 @@ cart.forEach((item) => {
 });
 
 
-
-// Increse & decrease quantity 
-const plusBtns = document.querySelectorAll(".plus");
-const minusBtns = document.querySelectorAll(".minus");
-
-plusBtns.forEach((btn) => {
-  btn.addEventListener("click", () => {
-    console.log("Plus Click");
-  });
+// Total & Sub Total Price
+let subtotal = 0;
+cart.forEach(item=>{
+    subtotal += item.price * item.quantity;
 });
 
-minusBtns.forEach((btn) => {
-  btn.addEventListener("click", () => {
-    console.log("Minus Click");
-  });
+document.querySelector(".subtotal").innerText =
+"₹"+subtotal;
+
+document.querySelector(".cart-total-amount").innerText =
+"₹"+(subtotal-500);
+
+}
+
+renderCart();
+
+// Increse & decrease quantity 
+    // plus button 
+document.addEventListener("click",(e)=>{
+    if(e.target.closest(".cart-plus")){
+        const index = e.target.closest(".cart-plus").dataset.index;
+
+        cart[index].quantity++;
+
+        localStorage.setItem("cart",JSON.stringify(cart));
+
+        renderCart();
+    }
+});
+
+    // Minus Button 
+document.addEventListener("click",(e)=>{
+    if(e.target.closest(".cart-minus")){
+        const index = e.target.closest(".cart-minus").dataset.index;
+
+        if(cart[index].quantity>1){
+            cart[index].quantity--;
+        }
+
+        localStorage.setItem("cart",JSON.stringify(cart));
+
+        renderCart();
+    }
+});
+
+// <!--========================= Delete item from cart ==========================-->
+
+const deleteBtns = document.querySelectorAll(".delete-btn");
+
+deleteBtns.forEach((btn) => {
+
+    btn.addEventListener("click", () => {
+
+        const id = btn.dataset.id;
+
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+        cart = cart.filter(item => item.id !== id);
+
+        localStorage.setItem("cart", JSON.stringify(cart));
+
+        location.reload();
+
+    });
+
 });

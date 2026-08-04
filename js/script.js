@@ -70,3 +70,22 @@ cartBtns.forEach((btn)=>{
     });
 
 });
+
+// <!--========================= Upadate cart count ==========================-->
+
+function updateCartCount() {
+    
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    
+    const cartCount = document.querySelector(".cartBtn span");
+    
+    let totalItems = 0;
+    
+    cart.forEach(item => {
+        totalItems += item.quantity;
+    });
+    
+    cartCount.textContent = totalItems;
+    
+}
+updateCartCount();

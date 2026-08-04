@@ -41,6 +41,7 @@ section {
 
 .cart-product-info {
     width: 68%;
+    height: 100%;
     background-color: var(--background-color);
     border-radius: 20px;
     box-shadow: 0 0 10px var(--shadow);
@@ -216,6 +217,7 @@ span {
 .cart-feature-section div span, i{
     color: var(--gray-color);
     font-size: 25px;
+    cursor: pointer;
 }
 .cart-feature-section div p{
     font-weight: 600;
