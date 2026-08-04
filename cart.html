@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart | ShopZone</title>
+
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/cart.css">
+    <script type="module" src="./js/script.js" defer></script>
+    <script type="module" src="./js/cart.js" defer></script>
+
+    <!-- Impot Font awesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
+    <!-- Import Remix icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
+
+<body>
+
+    <!--========================= Header SECTION ==========================-->
+    <header>
+        <div class="logo">
+            <span><i class="ri-shopping-bag-4-fill"></i></span>
+            Shop<span>Zone</span>
+        </div>
+
+        <div class="search-box">
+            <input type="text" placeholder="Search products...">
+            <button>
+                <span class="material-symbols-outlined">
+                    search
+                </span>
+            </button>
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="#">Shop</a>
+            <a href="#">Categories</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </nav>
+
+        <div class="icons">
+            <div class="cart">
+                <i class="fa-regular fa-heart"></i>
+                <span>0</span>
+            </div>
+            <div class="cart cartBtn">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span>0</span>
+            </div>
+        </div>
+    </header>
+
+    <h1 class="cart-heading">Your Cart</h1>
+
+    <!--========================= Product Details ==========================-->
+
+    <section>
+         <div class="cart-product-info">
+            <div class="cart-product-info-container">
+                <div class="cart-product-info-text">
+                    <img src="./assets/products/electronic/headphone1.png" alt="">
+                    <div>
+                        <h2>Wireless Headphone</h2>
+                        <p>₹999</p>
+                    </div>
+                </div>
+
+                <div class="cart-product-info-quantity">
+
+                    <!-- Quantity -->
+                    <div class="quantity">
+                        <button class="cart-minus">
+                            <i class="ri-subtract-line"></i>
+                        </button>
+                        <span class="cart-qty">1</span>
+                        <button class="cart-plus">
+                            <i class="ri-add-line"></i>
+                        </button>
+                    </div>
+
+
+                    <!-- Price -->
+                    <div class="cart-product-info-delete">
+                        <p>₹999</p>
+                        <i class="ri-delete-bin-line"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="cart-product-info-container">
+                <div class="cart-product-info-text">
+                    <img src="./assets/products/electronic/headphone1.png" alt="">
+                    <div>
+                        <h2>Wireless Headphone</h2>
+                        <p>₹999</p>
+                    </div>
+                </div>
+
+                <div class="cart-product-info-quantity">
+                    <!-- Quantity -->
+                    <div class="quantity">
+                        <button class="cart-minus">
+                            <i class="ri-subtract-line"></i>
+                        </button>
+                        <span class="cart-qty">1</span>
+                        <button class="cart-plus">
+                            <i class="ri-add-line"></i>
+                        </button>
+                    </div>
+
+                    <!-- Price -->
+                    <div class="cart-product-info-delete">
+                        <p>₹999</p>
+                        <i class="ri-delete-bin-line"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="cart-product-info-container">
+                <div class="cart-product-info-text">
+                    <img src="./assets/products/electronic/headphone1.png" alt="">
+                    <div>
+                        <h2>Wireless Headphone</h2>
+                        <p>₹999</p>
+                    </div>
+                </div>
+
+                <div class="cart-product-info-quantity">
+                    <!-- Quantity -->
+                    <div class="quantity">
+                        <button class="cart-minus">
+                            <i class="ri-subtract-line"></i>
+                        </button>
+                        <span class="cart-qty">1</span>
+                        <button class="cart-plus">
+                            <i class="ri-add-line"></i>
+                        </button>
+                    </div>
+
+                    <!-- Price -->
+                    <div class="cart-product-info-delete">
+                        <p>₹999</p>
+                        <i class="ri-delete-bin-line"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cart-payment-info">
+            <h2>Order Summery</h2>
+
+            <div class="cart-price-details">
+                <div>
+                    <p>Subtotal (3 Items)</p>
+                    <p>₹2997</p>
+                </div>
+                <div>
+                    <p>Shipping</p>
+                    <p>₹0</p>
+                </div>
+                <div id="cart-discount-price-details">
+                    <p>Discount</p>
+                    <p>-₹500</p>
+                </div>
+                <hr>
+                <div id="cart-total-price-details">
+                    <p>Total</p>
+                    <p>₹2497</p>
+                </div>
+            </div>
+
+            <button>Proceed to Checkout</button>
+
+            <div class="cart-feature-section">
+                <div>
+                    <span class="material-symbols-outlined">
+                        lock
+                    </span>
+                    <p>Secure Checkout</p>
+                </div>
+                <div>
+                    <span class="material-symbols-outlined">
+                        local_shipping
+                    </span>
+                    <p>Fast Delivery</p>
+                </div>
+                <div>
+                    <i class="fa-solid fa-arrows-rotate"></i>
+                    <p>Easy Returns</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <button class="cart-back-shopping-btn">
+        <i class="fa-solid fa-arrow-left"></i>
+        Continue Shopping
+    </button>
+
+</body>
+
+</html>

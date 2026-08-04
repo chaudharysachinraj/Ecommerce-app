@@ -49,6 +49,7 @@ section {
 
 .logo span {
     font-size: 32px;
+    font-weight: 700;
 }
 .search-box button span{
     color: #fff;
