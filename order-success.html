@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Successful | ShopZone</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/order-success.css">
+    <script src="./js/order-success.js" defer></script>
+    <script src="./js/script.js" defer></script>
+    
+    <!-- Impot Font awesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
+    <!-- Import Remix icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet" />
+
+</head>
+
+<body>
+
+        <!--========================= Header SECTION ==========================-->
+    <header>
+        <div class="logo">
+            <span><i class="ri-shopping-bag-4-fill"></i></span>
+            Shop<span>Zone</span>
+        </div>
+
+        <div class="search-box">
+            <input type="text" placeholder="Search products...">
+            <button>
+                <span class="material-symbols-outlined">
+                    search
+                </span>
+            </button>
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="#">Shop</a>
+            <a href="#">Categories</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </nav>
+
+        <div class="icons">
+            <div class="cart">
+                <i class="fa-regular fa-heart"></i>
+                <span>0</span>
+            </div>
+            <div class="cart cartBtn">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span>0</span>
+            </div>
+        </div>
+    </header>
+
+    <!--========================= Order SECTION ==========================-->
+
+    <section class="success">
+
+        <div class="success-card">
+            <div class="success-icon">
+                <i class="ri-checkbox-circle-fill"></i>
+            </div>
+            <h1>Order Placed Successfully!</h1>
+            <p>
+                Thank you for shopping with ShopZone.
+                Your order has been placed successfully.
+            </p>
+
+            <div class="order-details">
+                <div>
+                    <span>Order ID</span>
+                    <strong id="order-id"></strong>
+                </div>
+                <div>
+                    <span>Order Date</span>
+                    <strong id="order-date"></strong>
+                </div>
+                <div>
+                    <span>Estimated Delivery</span>
+                    <strong id="delivery-date"></strong>
+                </div>
+            </div>
+
+            <div class="success-buttons">
+                <a href="index.html" class="continue-btn">Continue Shopping</a>
+                <button class="invoice-btn">Download Invoice</button>
+            </div>
+
+        </div>
+
+    </section>
+
+</body>
+
+</html>
