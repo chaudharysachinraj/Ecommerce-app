@@ -22,70 +22,56 @@ document.querySelectorAll(".wishlist").forEach((btn) => {
 document.querySelectorAll(".cart-btn").forEach((btn) => {
   btn.addEventListener("click", (e) => {
     e.stopPropagation();
-
   });
 });
-
 
 // <!--========================= Add to Cart Code ==========================-->
 
 const cartBtns = document.querySelectorAll(".cart-btn");
 
-cartBtns.forEach((btn)=>{
+cartBtns.forEach((btn) => {
+  btn.addEventListener("click", (e) => {
+    e.stopPropagation();
 
-    btn.addEventListener("click",(e)=>{
+    const product = btn.closest(".product-card");
 
-        e.stopPropagation();
+    const item = {
+      id: product.dataset.id,
+      name: product.dataset.name,
+      price: Number(product.dataset.price),
+      image: product.dataset.image,
+      quantity: 1,
+    };
 
-        const product = btn.closest(".product-card");
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-        const item = {
+    const existingItem = cart.find((p) => p.id === item.id);
 
-            id: product.dataset.id,
-            name: product.dataset.name,
-            price: Number(product.dataset.price),
-            image: product.dataset.image,
-            quantity: 1
+    if (existingItem) {
+      existingItem.quantity++;
+    } else {
+      cart.push(item);
+    }
 
-        };
+    localStorage.setItem("cart", JSON.stringify(cart));
 
-        let cart = JSON.parse(localStorage.getItem("cart")) || [];
-
-        const existingItem = cart.find((p) => p.id === item.id);
-
-        if(existingItem){
-
-            existingItem.quantity++;
-
-        }else{
-
-            cart.push(item);
-
-        }
-
-        localStorage.setItem("cart", JSON.stringify(cart));
-
-        // console.log(cart);
-
-    });
-
+    // console.log(cart);
+  });
 });
 
 // <!--========================= Upadate cart count ==========================-->
 
 function updateCartCount() {
-    
-    const cart = JSON.parse(localStorage.getItem("cart")) || [];
-    
-    const cartCount = document.querySelector(".cartBtn span");
-    
-    let totalItems = 0;
-    
-    cart.forEach(item => {
-        totalItems += item.quantity;
-    });
-    
-    cartCount.textContent = totalItems;
-    
+  const cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+  const cartCount = document.querySelector(".cartBtn span");
+
+  let totalItems = 0;
+
+  cart.forEach((item) => {
+    totalItems += item.quantity;
+  });
+
+  cartCount.textContent = totalItems;
 }
 updateCartCount();

@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout | ShopZone</title>
+
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/checkout.css">
+    <link rel="stylesheet" href="./css/cart.css">
+    <!-- <script src="./js/checkout.js"></script> -->
+    <script src="./js/script.js"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <!-- Remix Icon -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+    <header>
+        <div class="logo">
+            <span><i class="ri-shopping-bag-4-fill"></i></span>
+            Shop<span>Zone</span>
+        </div>
+
+        <div class="search-box">
+            <input type="text" placeholder="Search products...">
+            <button>
+                <span class="material-symbols-outlined">
+                    search
+                </span>
+            </button>
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="#">Shop</a>
+            <a href="#">Categories</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </nav>
+
+        <div class="icons">
+            <div class="cart">
+                <i class="fa-regular fa-heart"></i>
+                <span>0</span>
+            </div>
+            <div class="cart cartBtn">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span>0</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- ================= PAGE TITLE ================= -->
+
+    <section class="checkout-heading">
+        <h1>Checkout</h1>
+    </section>
+
+
+    <!-- ================= CHECKOUT ================= -->
+
+    <section class="checkout">
+        <div class="checkout-container">
+
+            <!-- ================= LEFT ================= -->
+            <div class="checkout-left">
+
+                <!-- Shipping Information -->
+                <div class="checkout-card">
+                    <h2>
+                        Shipping Information
+                    </h2>
+                    <form>
+                        <div class="input-box">
+                            <label>
+                                Full Name
+                            </label>
+                            <input type="text" placeholder="Enter your full name">
+                        </div>
+
+                        <div class="input-box">
+                            <label>
+                                Phone Number
+                            </label>
+                            <input type="tel" placeholder="Enter your phone number">
+                        </div>
+
+                        <div class="input-box">
+                            <label>
+                                Address
+                            </label>
+                            <textarea rows="4" placeholder="Enter your address"></textarea>
+                        </div>
+
+                        <div class="double-input">
+                            <div class="input-box">
+                                <label>
+                                    City
+                                </label>
+                                <input type="text" placeholder="Enter your city">
+                            </div>
+
+                            <div class="input-box">
+                                <label>
+                                    Pincode
+                                </label>
+                                <input type="number" placeholder="Enter pincode">
+                            </div>
+
+                        </div>
+
+                    </form>
+
+                </div>
+
+                <!-- ================= PAYMENT METHOD ================= -->
+
+                <div class="checkout-card">
+
+                    <h2>Payment Method</h2>
+
+                    <!-- Credit / Debit Card -->
+                    <label class="payment-card active">
+                        <div class="payment-header" id="payment-card1">
+                            <div>
+                                <input type="radio" name="payment" checked>
+                                <span>Credit / Debit Card</span>
+                            </div>
+
+                            <div class="payment-logo">
+                                <img src="./assets/pay/visa.png" alt="Visa">
+                                <img src="./assets/pay/card.png" alt="MasterCard">
+                                <img src="./assets/pay/Rupay-Logo.png" alt="RuPay">
+                            </div>
+
+                        </div>
+
+                        <div class="payment-form">
+                            <div class="input-box">
+                                <label>Card Number</label>
+                                <input type="text" placeholder="1234 5678 9012 3456">
+                            </div>
+
+                            <div class="input-box">
+                                <label>Name on Card</label>
+                                <input type="text" placeholder="Enter name on card">
+                            </div>
+
+                            <div class="double-input">
+                                <div class="input-box">
+                                    <label>Expiry Date</label>
+                                    <input type="text" placeholder="MM / YY">
+                                </div>
+                                <div class="input-box">
+                                    <label>CVV</label>
+                                    <input type="password" maxlength="3" placeholder="123">
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </label>
+
+                    <!-- UPI -->
+
+                    <label class="payment-card">
+                        <div class="payment-header payment-card-upi">
+                            <div>
+                                <input type="radio" name="payment">
+                                <span>UPI</span>
+                            </div>
+                            <img src="./assets/pay/UPI-Logo.png" class="upi-logo">
+                        </div>
+                    </label>
+
+                    <!-- Cash On Delivery -->
+
+                    <label class="payment-card">
+                        <div class="payment-header">
+                            <div>
+                                <input type="radio" name="payment">
+                                <span>Cash on Delivery</span>
+                            </div>
+                        </div>
+                    </label>
+
+                </div>
+
+            </div>
+
+            <!-- ================= RIGHT SIDE ================= -->
+            <div class="order-summary">
+
+                <div class="checkout-right">
+                    <h2>Order Summary</h2>
+                    <div class="summary-products">
+                        <!-- Dynamic Products -->
+                    </div>
+
+                    <hr>
+
+                    <div class="summary-row">
+                        <span>Subtotal</span>
+                        <span class="subtotal">₹0</span>
+                    </div>
+
+                    <div class="summary-row" id="summery-discount">
+                        <span>Discount</span>
+                        <span>-₹500</span>
+                    </div>
+
+                    <div class="summary-row">
+                        <span>Shipping</span>
+                        <span>₹0</span>
+                    </div>
+
+                    <hr>
+
+                    <div class="summary-row" id="summary-row-total">
+                        <span>Total</span>
+                        <span class="total-price">₹0</span>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= PLACE ORDER ================= -->
+
+    <div class="checkout-botton">
+        <button class="place-order-btn">
+            Place Order
+        </button>
+    </div> 
+
+
+
+    <script src="./js/checkout.js"></script>
+
+</body>
+
+</html>
